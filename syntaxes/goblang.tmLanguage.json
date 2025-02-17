@@ -1,0 +1,100 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "GobLang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#call"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#spec"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.goblang",
+					"match": "(#).*\\n?"
+				}
+			]
+		},
+		"spec": {
+			"patterns": [
+				{
+					"name": "constant.goblang",
+					"match": "\\b(true|false|null)\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.goblang",
+					"match": "\\b(if|while|elif|else|func|return|let)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.goblang",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.goblang",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.goblang",
+					"match": "(=|!|\\<|\\>|\\+|\\-|\\*|\\/|and|&&|or|\\|)"
+				}
+			]
+		},
+		"call": {
+			"patterns": [
+				{
+					"name": "entity.name.function.goblang",
+					"match": "\\b([a-zA-Z]\\w*)(?:\\()"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"name": "variable.name.goblang",
+					"match": "\\b([a-zA-Z]\\w*)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.goblang",
+					"match": "(\\d(\\d|\\.)*\\d*)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.gob"
+}

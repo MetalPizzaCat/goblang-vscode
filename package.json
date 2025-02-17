@@ -1,0 +1,25 @@
+{
+  "name": "goblang",
+  "displayName": "GobLang",
+  "description": "Simple syntax highlight for GobLang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "goblang",
+      "aliases": ["GobLang", "goblang"],
+      "extensions": [".gob"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "goblang",
+      "scopeName": "source.gob",
+      "path": "./syntaxes/goblang.tmLanguage.json"
+    }]
+  }
+}
