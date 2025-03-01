@@ -6,20 +6,33 @@
   "engines": {
     "vscode": "^1.97.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetalPizzaCat/goblang-vscode"
+  },
   "categories": [
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "goblang",
-      "aliases": ["GobLang", "goblang"],
-      "extensions": [".gob"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "goblang",
-      "scopeName": "source.gob",
-      "path": "./syntaxes/goblang.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "goblang",
+        "aliases": [
+          "GobLang",
+          "goblang"
+        ],
+        "extensions": [
+          ".gob"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "goblang",
+        "scopeName": "source.gob",
+        "path": "./syntaxes/goblang.tmLanguage.json"
+      }
+    ]
   }
 }
