@@ -2,7 +2,7 @@
   "name": "goblang",
   "displayName": "GobLang",
   "description": "Simple syntax highlight for GobLang",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -25,6 +25,12 @@
           ".gob"
         ],
         "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "goblang",
+        "path": "./snippets.json"
       }
     ],
     "grammars": [
