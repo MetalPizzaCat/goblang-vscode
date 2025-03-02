@@ -3,6 +3,9 @@
 	"name": "GobLang",
 	"patterns": [
 		{
+			"include": "#special_constant"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -22,9 +25,6 @@
 		},
 		{
 			"include": "#comments"
-		},
-		{
-			"include": "#spec"
 		}
 	],
 	"repository": {
@@ -36,7 +36,7 @@
 				}
 			]
 		},
-		"spec": {
+		"special_constant": {
 			"patterns": [
 				{
 					"name": "constant.goblang",
