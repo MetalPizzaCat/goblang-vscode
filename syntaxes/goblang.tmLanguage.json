@@ -5,6 +5,10 @@
 		{
 			"include": "#special_constant"
 		},
+		
+		{
+			"include": "#numbers"
+		},
 		{
 			"include": "#keywords"
 		},
@@ -19,9 +23,6 @@
 		},
 		{
 			"include": "#variable"
-		},
-		{
-			"include": "#numbers"
 		},
 		{
 			"include": "#comments"
@@ -67,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.goblang",
-					"match": "(=|!|\\<|\\>|\\+|\\-|\\*|\\/|and|&&|or|\\|)"
+					"match": "(=|!|\\<|\\>|\\+|\\-|\\*|\\/|and|&&|or|\\||&|\\|\\>\\>|\\<\\<)"
 				}
 			]
 		},
@@ -91,10 +92,23 @@
 			"patterns": [
 				{
 					"name": "constant.numeric.goblang",
+					"match": "u(0x)(([A-Fa-f]|\\d)+)"
+				},
+				{
+					"name": "constant.numeric.goblang",
+					"match": "(0x)(([A-Fa-f]|\\d)+)"
+				},
+				{
+					"name": "constant.numeric.goblang",
 					"match": "(\\d(\\d|\\.)*\\d*)"
+				},
+				{
+					"name": "constant.numeric.goblang",
+					"match": "u(\\d(\\d|\\.)*\\d*)"
 				}
 			]
 		}
+		
 	},
 	"scopeName": "source.gob"
 }
